@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b31b88810f7ecd28beb6",
+    "revision": "8eee04d8a680a28c2f0b",
     "url": "/ChemiGuesser/static/css/main.551300b5.chunk.css"
   },
   {
-    "revision": "b31b88810f7ecd28beb6",
-    "url": "/ChemiGuesser/static/js/main.b31b8881.chunk.js"
+    "revision": "8eee04d8a680a28c2f0b",
+    "url": "/ChemiGuesser/static/js/main.8eee04d8.chunk.js"
   },
   {
     "revision": "300ccace53ceddbd09ba",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/ChemiGuesser/static/js/runtime~main.ba5f6766.js"
   },
   {
-    "revision": "21a50e292e1e78591c769088451db73b",
+    "revision": "b258142f81e31d369821636a8037c538",
     "url": "/ChemiGuesser/index.html"
   }
 ];
