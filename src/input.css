@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    .element{
+        @apply border border-gray-500 h-14 w-14 rounded-md
+            flex flex-col leading-none justify-between py-0.5
+            font-bold text-xs relative
+    }
+    .el-shadow{
+        @apply drop-shadow-[(0_0_0.5px_rgb(0_0_0_/_1))]
+    }
+    .element-hover{
+        @apply hover:h-24 hover:w-24 hover:text-xl transition-all
+            hover:-m-6 hover:backdrop-blur hover:z-10 hover:cursor-pointer
+            hover:shadow hover:shadow-slate-300
+    }
+    .table-template{
+        @apply [&:nth-child(1)]:col-start-1 [&:nth-child(1)]:col-end-18 
+            [&:nth-child(57)]:col-start-4 [&:nth-child(74)]:col-start-4 
+            [&:nth-child(5)]:col-start-13 [&:nth-child(13)]:col-start-13
+    }
+}
+
+@layer utilities {
+    .text-shadow {
+      text-shadow: 0 0 0.5px black, 0 0 0.5px black, 0 0 1px black, 0 0 1px black;
+    }
+}
+
+*,
+::before,
+::after {
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --will-be-deleted: ; 
+}
