@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ChemiGuesser/precache-manifest.a524ebb32bf2ed4c44760886d9507feb.js"
+  "/ChemiGuesser/precache-manifest.9581c3f72064f8fe6a908d386e6fde3b.js"
 );
 
 workbox.clientsClaim();
