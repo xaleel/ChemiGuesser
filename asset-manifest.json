@@ -1,13 +1,13 @@
 {
-  "main.css": "/ChemiGuesser/static/css/main.eaddd09b.chunk.css",
-  "main.js": "/ChemiGuesser/static/js/main.ecbfdb66.chunk.js",
-  "main.js.map": "/ChemiGuesser/static/js/main.ecbfdb66.chunk.js.map",
+  "main.css": "/ChemiGuesser/static/css/main.6df39b8d.chunk.css",
+  "main.js": "/ChemiGuesser/static/js/main.1433d5ee.chunk.js",
+  "main.js.map": "/ChemiGuesser/static/js/main.1433d5ee.chunk.js.map",
   "static/js/1.300ccace.chunk.js": "/ChemiGuesser/static/js/1.300ccace.chunk.js",
   "static/js/1.300ccace.chunk.js.map": "/ChemiGuesser/static/js/1.300ccace.chunk.js.map",
   "runtime~main.js": "/ChemiGuesser/static/js/runtime~main.ba5f6766.js",
   "runtime~main.js.map": "/ChemiGuesser/static/js/runtime~main.ba5f6766.js.map",
-  "static/css/main.eaddd09b.chunk.css.map": "/ChemiGuesser/static/css/main.eaddd09b.chunk.css.map",
+  "static/css/main.6df39b8d.chunk.css.map": "/ChemiGuesser/static/css/main.6df39b8d.chunk.css.map",
   "index.html": "/ChemiGuesser/index.html",
-  "precache-manifest.a524ebb32bf2ed4c44760886d9507feb.js": "/ChemiGuesser/precache-manifest.a524ebb32bf2ed4c44760886d9507feb.js",
+  "precache-manifest.e35fe93e4d7b27d081d37efc89a650cc.js": "/ChemiGuesser/precache-manifest.e35fe93e4d7b27d081d37efc89a650cc.js",
   "service-worker.js": "/ChemiGuesser/service-worker.js"
 }
