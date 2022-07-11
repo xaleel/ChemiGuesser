@@ -8,10 +8,12 @@ export default function Settings(props){
         btn.setAttribute("aria-checked", String(!(btn.ariaChecked === "true")))
         if (btn.ariaChecked === "true"){
             document.getElementById("btn-sp1").style.left = "calc(1.75rem - 2px)";
-            props.setTheme('dark')
+            props.setTheme('dark');
+            localStorage.setItem('ChemiGuessTheme', 'dark');
         } else {
             document.getElementById("btn-sp1").style.left = "2px";
-            props.setTheme('light')
+            props.setTheme('light');
+            localStorage.setItem('ChemiGuessTheme', 'light');
         }
     }
 
@@ -20,10 +22,12 @@ export default function Settings(props){
         btn.setAttribute("aria-checked", String(!(btn.ariaChecked === "true")))
         if (btn.ariaChecked === "true"){
             document.getElementById("btn-sp2").style.left = "calc(1.75rem - 2px)";
-            props.setEasy(true)
+            props.setEasy(true);
+            localStorage.setItem('ChemiGuessDifficulty', 'easy');
         } else {
             document.getElementById("btn-sp2").style.left = "2px";
-            props.setEasy(false)
+            props.setEasy(false);
+            localStorage.setItem('ChemiGuessDifficulty', 'easy');
         }
     }
 

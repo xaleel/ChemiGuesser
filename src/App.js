@@ -8,12 +8,12 @@ import Tutorial from './components/Tutorial';
 
 function App() {
   
-  let [theme, setTheme] = useState('light');
+  let [theme, setTheme] = useState(localStorage.getItem('ChemiGuessTheme') || 'light');
   let [settings, displaySettings] = useState(false);
   let [tutorial, displayTutorial] = useState(false);
   let [display, setDisplay] = useState('full');
   let [answer, setAnswer] = useState(0);
-  let [easy, setEasy] = useState(false)
+  let [easy, setEasy] = useState(localStorage.getItem('ChemiGuessDifficulty') == 'easy');
 
   let bg1 = 'rgb(198 198 198 / 70%)';
   let bg2 = 'white';

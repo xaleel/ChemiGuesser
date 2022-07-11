@@ -4,6 +4,7 @@ import elements from "../elements";
 export default function Input(props){
 
     const [message, setMessage] = useState("Enter the name or symbol of any element to make your first guess")
+    const [winScr, SetWinScr] = useState(false)
 
     function getPosition(element){
         const {top, left, width, height} = element.getBoundingClientRect();
@@ -23,6 +24,7 @@ export default function Input(props){
     }
 
     function win(){
+        SetWinScr(true)
         for(let i = 1; i < 119; i++){
             let answer = document.getElementById(props.answer)
             let element = document.getElementById(i)
@@ -44,6 +46,10 @@ export default function Input(props){
     const maxDistance = Math.hypot(posA.x - posB.x, posA.y - posB.y);
 
     const enter = () => {
+        if (winScr){
+            restart();
+            return;
+        }
         let str = document.getElementById('input').value
         str = str[0].toUpperCase() + str.slice(1)
         if (!checkElement(str)){
@@ -66,7 +72,8 @@ export default function Input(props){
 
         let distance = Math.hypot(posA.x - posB.x, posA.y - posB.y) / maxDistance;
         props.setGuess(props.guess.concat(element.id));
-        
+        props.setGuesses(props.guesses.concat({el: element.getAttribute('data-name'), distance: distance}))
+
         element.style.background = `rgba(${255 * (1 - distance)}, ${255 * distance}, ${255 * distance}, 1)`;
         document.getElementById('input').value = "";
     }
@@ -77,12 +84,22 @@ export default function Input(props){
         }
     }
 
+    const restart = () => {
+        props.setGuess([]);
+        props.setGuesses([]);
+        for(let i = 1; i < 119; i++){
+            document.getElementById(i).style = "";
+        }
+        props.displaySettings(false);
+        props.displayTutorial(false);
+    }
+
     return(
         <div className="w-screen flex flex-col items-center my-6">
             <div className="flex flex-row">
-                <input id="input" type="text" className="mr-3 opacity-80 focus:outline-none px-1 text-lg rounded shadow-md" onKeyPress={press}/>
+                <input id="input" disabled={winScr} type="text" className="mr-3 opacity-80 focus:outline-none px-1 text-lg rounded shadow-md" onKeyPress={press}/>
                 <button className="text-lg bg-slate-500 rounded hover:opacity-90 px-4 py-2 text-white font-bold" onClick={enter}>
-                    Enter
+                    {winScr ? "Restart" : "Enter"}
                 </button>
             </div>
             <p className={props.color}>

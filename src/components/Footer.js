@@ -12,10 +12,10 @@ export default function Footer(props){
         <div className={classStr}>
             by 
             <a href="https://xaleel.github.io/" className="text-blue-600 hover:text-blue-900" target="_blank" rel="noopener noreferrer">
-                Xaleel
+                {" Xaleel "}
             </a>
             @ 2022
-            <a href="https://github.com/xaleel/" className="ml-1 text-blue-600 hover:text-blue-900" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/xaleel/ChemiGuesser" className="ml-1 text-blue-600 hover:text-blue-900" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-github"></i>
             </a>
         </div>
