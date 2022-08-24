@@ -23,6 +23,7 @@ export default function Body(props){
             }
         }
         setGuess([]);
+        setGuesses([]);
         props.setDisplay('full');
         props.displaySettings(false);
         props.displayTutorial(false);

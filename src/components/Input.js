@@ -72,26 +72,39 @@ export default function Input(props){
 
         let distance = Math.hypot(posA.x - posB.x, posA.y - posB.y) / maxDistance;
         props.setGuess(props.guess.concat(element.id));
-        props.setGuesses(props.guesses.concat({el: element.getAttribute('data-name'), distance: distance}))
 
+        let guess = {el: element.getAttribute('data-name'), distance: distance}
+        let in_array = false;
+        for (let i = 0; i < props.guesses.length; i++){
+            if (props.guesses[i].el === guess.el){
+                in_array = true;
+            }
+        }
+        if (!in_array){
+            props.setGuesses(props.guesses.concat(guess))
+        }
+        console.log(props.guesses)
+        
         element.style.background = `rgba(${255 * (1 - distance)}, ${255 * distance}, ${255 * distance}, 1)`;
         document.getElementById('input').value = "";
     }
     
     const press = (ev) => {
         if (ev.code === "Enter"){
-            enter()
+            enter();
         }
-    }
+    };
 
     const restart = () => {
+        setMessage("")
+        SetWinScr(false)
         props.setGuess([]);
         props.setGuesses([]);
+        props.displaySettings(false);
+        props.displayTutorial(false);
         for(let i = 1; i < 119; i++){
             document.getElementById(i).style = "";
         }
-        props.displaySettings(false);
-        props.displayTutorial(false);
     }
 
     return(

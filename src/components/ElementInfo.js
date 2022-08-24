@@ -11,8 +11,6 @@ export default function ElementInfo(props){
             let query = props.element === "Mercury" ? "Mercury (element)" : props.element
             const page = await wiki.page(query);
             const intro = await page.intro({redirect: false});
-            const summary = await page.summary({redirect: false});
-            console.log(intro)
             setContent(intro)
         } catch (error) {
             console.log(error);
